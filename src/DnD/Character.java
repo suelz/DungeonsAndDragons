@@ -1,3 +1,5 @@
+package DnD;
+
 public class Character {
 
     private String name;
@@ -10,13 +12,16 @@ public class Character {
     private int intelligence;
     private int wisdom;
     private int charisma;
-    //private Race race;
+    private Race race;
     //private Class class <----- need better name
 
 
     public Character(String name, int level) {
         this.name = name;
         this.level = level;
+    }
+    public Character(Race race){
+        this.race = race;
     }
 
     public Character(String name,  int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma) {
@@ -192,5 +197,13 @@ public class Character {
 
     public void setCharisma(int charisma) {
         this.charisma = charisma;
+    }
+
+    public Race getRace() {
+        return race;
+    }
+
+    public void setRace(Race race) {
+        this.race = race;
     }
 }

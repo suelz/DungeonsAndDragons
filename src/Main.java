@@ -1,25 +1,23 @@
+import DnD.Character;
+import DnD.Dice;
+import DnD.Race;
+import DnD.Races.Dwarf;
+
 public class Main {
 
     public static void main(String[] args) {
 
-        //Character(String name, int level, int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma)
-        Character conor = new Character("Conor",1);
-      // public Character(String name,  int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma)
-        Character bob = new Character("bob", Dice.statRoll(), Dice.statRoll(), Dice.statRoll(), Dice.statRoll(), Dice.statRoll(),Dice.statRoll());
-        System.out.println("name: "+ bob.getName());
-        System.out.println("level: " + bob.getLevel());
-        System.out.println("Proficiency: " + bob.getProficiency());
-        System.out.println("str: " + bob.getStrength());
-        System.out.println("dex: " + bob.getDexterity());
-        System.out.println("cons: " + bob.getConstitution());
-        System.out.println("int: " + bob.getIntelligence());
-        System.out.println("wis: " + bob.getWisdom());
-        System.out.println("char: " + bob.getCharisma());
+
+        Race race = new Dwarf("Dwarf",120,2, "Common, Dwarfish", "Can see in dark",
+                "resil","dwarven weapen training"," tools","stonecunning");
+        Character conor = new Character(race);
+
+        System.out.println(conor.getRace().getLanguages());
 
 
 
        /* for(int i = 0; i < 1000; i++){
-            System.out.println(i + " :: " + Dice.dice(100));
+            System.out.println(i + " :: " + DnD.Dice.dice(100));
         }*/
 
     }
