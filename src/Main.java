@@ -12,6 +12,8 @@ public class Main {
                 "resil","dwarven weapen training"," tools","stonecunning");
         Character conor = new Character(race);
 
+
+        
         System.out.println(conor.getRace().getLanguages());
 
 
