@@ -3,18 +3,19 @@ package DnD.Races;
 import DnD.Race;
 
 public class Dwarf extends Race {
-    private String darkVision;
-    private String dwarvenResilience;
-    private String dwarvenCombatTraining;
-    private String toolProficieny;
-    private String stonecunning;
+    private String darkVision; //You can see in the dark
+    private String dwarvenResilience; //Advantage on saving throws against poison, and have resistance against poison damage
+    private String dwarvenCombatTraining; //Proficiency with battle-axe, hand-axe, light hammer, and warhammer
+    private String toolProficiency; //Gain proficiency with artisan's tools
+    private String stonecunning; //Whenever you make an Intelligence check related to the origin of stonework, you are considered proficient in the History skill
 
-    public Dwarf(String raceName, int age, int raceStatBonus, String languages, String darkVision, String dwarvenResilience, String dwarvenCombatTraining, String toolProficieny, String stonecunning) {
+    public Dwarf(String raceName, int age, int raceStatBonus, String languages, String darkVision,
+                 String dwarvenResilience, String dwarvenCombatTraining, String toolProficiency, String stonecunning) {
         super(raceName, age, raceStatBonus, languages);
         this.darkVision = darkVision;
         this.dwarvenResilience = dwarvenResilience;
         this.dwarvenCombatTraining = dwarvenCombatTraining;
-        this.toolProficieny = toolProficieny;
+        this.toolProficiency = toolProficiency;
         this.stonecunning = stonecunning;
     }
 
@@ -42,12 +43,12 @@ public class Dwarf extends Race {
         this.dwarvenCombatTraining = dwarvenCombatTraining;
     }
 
-    public String getToolProficieny() {
-        return toolProficieny;
+    public String getToolProficiency() {
+        return toolProficiency;
     }
 
-    public void setToolProficieny(String toolProficieny) {
-        this.toolProficieny = toolProficieny;
+    public void setToolProficiency(String toolProficiency) {
+        this.toolProficiency = toolProficiency;
     }
 
     public String getStonecunning() {

@@ -24,7 +24,21 @@ public class Character {
         this.race = race;
     }
 
-    public Character(String name,  int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma) {
+    public Character(String name, int xp, int level, int proficiency, int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma, Race race) {
+        this.name = name;
+        this.xp = xp;
+        this.level = level;
+        this.proficiency = proficiency;
+        this.strength = strength;
+        this.dexterity = dexterity;
+        this.constitution = constitution;
+        this.intelligence = intelligence;
+        this.wisdom = wisdom;
+        this.charisma = charisma;
+        this.race = race;
+    }
+
+    public Character(String name, int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma) {
         this.name = name;
         this.xp = 0;
         this.level = 1;

@@ -3,9 +3,9 @@ package DnD.Races;
 import DnD.Race;
 
 public class Tiefling extends Race {
-    private String darkVision;
-    private String hellishResistance;
-    private String infernalLegacy;
+    private String darkVision;//You can see in the dark
+    private String hellishResistance; //You have resistance to fire damage
+    private String infernalLegacy; //You know the thaumaturgy cantrip.
 
     public Tiefling(String raceName, int age, int raceStatBonus, String languages, String darkVision, String hellishResistance, String infernalLegacy) {
         super(raceName, age, raceStatBonus, languages);

@@ -3,10 +3,10 @@ package DnD.Races;
 import DnD.Race;
 
 public class Elf extends Race {
-    private String darkVision;
-    private String keenSenses;
-    private String feyAncestry;
-    private String trance;
+    private String darkVision; //You can see in the dark
+    private String keenSenses; //Proficient in perception
+    private String feyAncestry; //Advantage on saving throws against being charmed, and magic can't put you to sleep
+    private String trance; //You do not need sleep
 
     public Elf(String raceName, int age, int raceStatBonus, String languages, String darkVision, String keenSenses, String feyAncestry, String trance) {
         super(raceName, age, raceStatBonus, languages);
