@@ -96,5 +96,9 @@ public class Helper {
 
     }
 
+    public static Stats generateStats(){
+        return new Stats(Dice.statRoll(),Dice.statRoll(),Dice.statRoll(),Dice.statRoll(),Dice.statRoll(),Dice.statRoll(),Dice.statRoll());
+    }
+
 
 }

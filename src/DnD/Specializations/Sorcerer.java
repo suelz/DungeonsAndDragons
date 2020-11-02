@@ -2,23 +2,22 @@ package DnD.Specializations;
 
 import DnD.Spec;
 
-public class Barbarian extends Spec {
-    private String specName; //Barbarian
-    private String desc; //A fierce warrior of primitive background who can enter a battle rage
-    private String hitDie; //d12
-    private String primaryStat; //Strength
-    private String savingThrow; //Strength & Constitution
-    private String armor; // Light and medium armor, shields
-    private String weapon; //simple and martial weapons
+public class Sorcerer extends Spec {
+    private String specName; //Sorcerer
+    private String desc; //A spellcaster who draws on inherent magic from a gift or bloodline
+    private String hitDie; //d16
+    private String primaryStat; //Charisma
+    private String savingThrow; //Constitution & Charisma
+    //private String armor; // None
+    private String weapon; //Daggers, darts, slings, quarterstaff, light crossbows
 
-    public Barbarian(String specialization, String specName, String desc, String hitDie, String primaryStat, String savingThrow, String armor, String weapon) {
+    public Sorcerer(String specialization, String specName, String desc, String hitDie, String primaryStat, String savingThrow, String weapon) {
         super(specialization);
         this.specName = specName;
         this.desc = desc;
         this.hitDie = hitDie;
         this.primaryStat = primaryStat;
         this.savingThrow = savingThrow;
-        this.armor = armor;
         this.weapon = weapon;
     }
 
@@ -62,19 +61,11 @@ public class Barbarian extends Spec {
         this.savingThrow = savingThrow;
     }
 
-    public String getArmor() {
-        return armor;
-    }
-
-    public void setArmor(String armor) {
-        this.armor = armor;
-    }
-
     public String getWeapon() {
         return weapon;
     }
 
-    public void setWeapons(String weapon) {
+    public void setWeapon(String weapon) {
         this.weapon = weapon;
     }
 }

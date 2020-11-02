@@ -5,50 +5,15 @@ public class Character {
     private String name;
     private int xp;
     private int level;
-    private int proficiency;
-    private int strength;
-    private int dexterity;
-    private int constitution;
-    private int intelligence;
-    private int wisdom;
-    private int charisma;
+    private Stats stats;
     private Race race;
-    //private Class class <----- need better name
 
-
-    public Character(String name, int level) {
-        this.name = name;
-        this.level = level;
-    }
-    public Character(Race race){
-        this.race = race;
-    }
-
-    public Character(String name, int xp, int level, int proficiency, int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma, Race race) {
+    public Character(String name, int xp, int level, Stats stats, Race race) {
         this.name = name;
         this.xp = xp;
         this.level = level;
-        this.proficiency = proficiency;
-        this.strength = strength;
-        this.dexterity = dexterity;
-        this.constitution = constitution;
-        this.intelligence = intelligence;
-        this.wisdom = wisdom;
-        this.charisma = charisma;
+        this.stats = stats;
         this.race = race;
-    }
-
-    public Character(String name, int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma) {
-        this.name = name;
-        this.xp = 0;
-        this.level = 1;
-        this.proficiency = 2;
-        this.strength = strength;
-        this.dexterity = dexterity;
-        this.constitution = constitution;
-        this.intelligence = intelligence;
-        this.wisdom = wisdom;
-        this.charisma = charisma;
     }
 
     public String getName() {
@@ -157,60 +122,12 @@ public class Character {
         }
     }
 
-    public int getProficiency() {
-        return proficiency;
+    public Stats getStats() {
+        return stats;
     }
 
-    public void setProficiency(int proficiency) {
-        this.proficiency = proficiency;
-    }
-
-    public int getStrength() {
-        return strength;
-    }
-
-    public void setStrength(int strength) {
-        this.strength = strength;
-    }
-
-    public int getDexterity() {
-        return dexterity;
-    }
-
-    public void setDexterity(int dexterity) {
-        this.dexterity = dexterity;
-    }
-
-    public int getConstitution() {
-        return constitution;
-    }
-
-    public void setConstitution(int constitution) {
-        this.constitution = constitution;
-    }
-
-    public int getIntelligence() {
-        return intelligence;
-    }
-
-    public void setIntelligence(int intelligence) {
-        this.intelligence = intelligence;
-    }
-
-    public int getWisdom() {
-        return wisdom;
-    }
-
-    public void setWisdom(int wisdom) {
-        this.wisdom = wisdom;
-    }
-
-    public int getCharisma() {
-        return charisma;
-    }
-
-    public void setCharisma(int charisma) {
-        this.charisma = charisma;
+    public void setStats(Stats stats) {
+        this.stats = stats;
     }
 
     public Race getRace() {
