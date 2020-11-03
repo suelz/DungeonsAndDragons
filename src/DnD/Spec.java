@@ -4,14 +4,16 @@ package DnD;
 //DND uses the world Class to describe the specialization a character can be,
 //I have decided to call it Spec as Java uses Class as a keyword for defining objects
 
-public class Spec {
-    private String specName; //Barbarian
-    private String desc; //A fierce warrior of primitive background who can enter a battle rage
-    private String hitDie; //d12
-    private String primaryStat; //Strength
-    private String savingThrow; //Strength & Constitution
-    private String armor; // Light and medium armor, shields
-    private String weapon; //simple and martial weapons
+public abstract class Spec {
+    private String specName;
+    private String desc;
+    private String hitDie;
+    private String primaryStat;
+    private String savingThrow;
+    private String armor;
+    private String weapon;
+
+    private int hitPoints;
 
     public Spec(String specName, String desc, String hitDie, String primaryStat, String savingThrow, String armor, String weapon) {
         this.specName = specName;
@@ -86,5 +88,15 @@ public class Spec {
 
     public void setWeapon(String weapon) {
         this.weapon = weapon;
+    }
+
+
+    public int getHitPoints() {
+        return hitPoints;
+    }
+
+
+    public void setHitPoints(int hitPoints) {
+        this.hitPoints = hitPoints + Stats.getConstitution();
     }
 }

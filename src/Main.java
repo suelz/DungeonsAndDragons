@@ -1,17 +1,14 @@
 import DnD.*;
 import DnD.Character;
-import DnD.Races.Dwarf;
+import DnD.Spec;
 import DnD.Specializations.Barbarian;
+
 
 import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
-
-
-
-
 
 
         Stats stats = Helper.generateStats();
@@ -22,7 +19,7 @@ public class Main {
         Race race = Helper.pickRace();
         Spec spec = Helper.pickSpec();
         Character conor = new Character(characterName,0,1,stats,spec, race );
-
+        Helper.startingHitPoints(spec);
         System.out.println("Name: " + conor.getName());
         System.out.println("Spec: " + conor.getSpec().getSpecName());
         System.out.println("Level: " + conor.getLevel());
@@ -35,6 +32,10 @@ public class Main {
         System.out.println("INT: " + conor.getStats().getIntelligence());
         System.out.println("WIS: " + conor.getStats().getWisdom());
         System.out.println("CHAR: " + conor.getStats().getCharisma());
+        System.out.println("Hit Points " + conor.getSpec().getHitPoints());
+
+
+
 
 
     }

@@ -1,13 +1,13 @@
 package DnD;
 
 public class Stats {
-    private int proficiency;
-    private int strength;
-    private int dexterity;
-    private int constitution;
-    private int intelligence;
-    private int wisdom;
-    private int charisma;
+    private static int proficiency;
+    private static int strength;
+    private static int dexterity;
+    private static int constitution;
+    private static int intelligence;
+    private static int wisdom;
+    private static int charisma;
 
     public Stats(int proficiency, int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma) {
         this.proficiency = proficiency;
@@ -19,7 +19,7 @@ public class Stats {
         this.charisma = charisma;
     }
 
-    public int getProficiency() {
+    public static int getProficiency() {
         return proficiency;
     }
 
@@ -43,7 +43,7 @@ public class Stats {
         this.dexterity = dexterity;
     }
 
-    public int getConstitution() {
+    public static int getConstitution() {
         return constitution;
     }
 

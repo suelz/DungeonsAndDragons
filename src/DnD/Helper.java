@@ -179,5 +179,24 @@ public static Spec pickSpec(){
         return new Stats(Dice.statRoll(),Dice.statRoll(),Dice.statRoll(),Dice.statRoll(),Dice.statRoll(),Dice.statRoll(),Dice.statRoll());
     }
 
-
+//Figure out how much HP a new character should get based on const + a set value based on spec and call setHitPoints()
+    public static void startingHitPoints(Spec x){
+       if(x.getClass() == Barbarian.class){
+           x.setHitPoints(12);
+           return;
+       }else if(x.getClass() == Bard.class || x.getClass() == Cleric.class ||
+                x.getClass() == Druid.class || x.getClass() == Monk.class ||
+                x.getClass() == Rogue.class || x.getClass() == Warlock.class){
+           x.setHitPoints(8);
+           return;
+       }else if(x.getClass() == Fighter.class || x.getClass() == Paladin.class ||
+                x.getClass() == Ranger.class){
+           x.setHitPoints(10);
+           return;
+       }else if(x.getClass() == Sorcerer.class || x.getClass() == Wizard.class){
+           x.setHitPoints(6);
+           return;
+       }
+       return;
+    }
 }
