@@ -6,13 +6,15 @@ public class Character {
     private int xp;
     private int level;
     private Stats stats;
+    private Spec spec;
     private Race race;
 
-    public Character(String name, int xp, int level, Stats stats, Race race) {
+    public Character(String name, int xp, int level, Stats stats, Spec spec, Race race) {
         this.name = name;
         this.xp = xp;
         this.level = level;
         this.stats = stats;
+        this.spec = spec;
         this.race = race;
     }
 
@@ -128,6 +130,14 @@ public class Character {
 
     public void setStats(Stats stats) {
         this.stats = stats;
+    }
+
+    public Spec getSpec() {
+        return spec;
+    }
+
+    public void setSpec(Spec spec) {
+        this.spec = spec;
     }
 
     public Race getRace() {

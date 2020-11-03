@@ -1,6 +1,7 @@
 import DnD.*;
 import DnD.Character;
 import DnD.Races.Dwarf;
+import DnD.Specializations.Barbarian;
 
 import java.util.Scanner;
 
@@ -8,17 +9,22 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Stats stats = Helper.generateStats();
 
+
+
+
+
+        Stats stats = Helper.generateStats();
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter your name: ");
         String characterName = scanner.nextLine();
 
-
         Race race = Helper.pickRace();
-        Character conor = new Character(characterName,0,1,stats, race );
+        Spec spec = Helper.pickSpec();
+        Character conor = new Character(characterName,0,1,stats,spec, race );
 
         System.out.println("Name: " + conor.getName());
+        System.out.println("Spec: " + conor.getSpec().getSpecName());
         System.out.println("Level: " + conor.getLevel());
         System.out.println("Race: " + conor.getRace().getRaceName());
         System.out.println("Age: " + conor.getRace().getAge());
@@ -29,9 +35,6 @@ public class Main {
         System.out.println("INT: " + conor.getStats().getIntelligence());
         System.out.println("WIS: " + conor.getStats().getWisdom());
         System.out.println("CHAR: " + conor.getStats().getCharisma());
-
-
-
 
 
     }
